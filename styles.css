@@ -1,0 +1,12 @@
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(180deg, #F8E9E7, #FDEFEA);
+}
+[data-testid="stHeader"] {
+    background: rgba(255,255,255,0.0);
+}
+div.stButton > button {
+    background: rgba(255,255,255,0.6);
+    border-radius: 12px;
+    border: 1px solid #F1DCD7;
+    color: #4A3F46;
+}
