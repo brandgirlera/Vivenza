@@ -3,7 +3,7 @@
     background: linear-gradient(180deg, #F8E9E7, #FDEFEA);
 }
 
-/* Remove default Streamlit header line */
+/* Remove Streamlit's built-in header background */
 [data-testid="stHeader"] {
     background: rgba(255,255,255,0.0);
     border-bottom: none;
@@ -31,7 +31,6 @@
     font-weight: 600;
     cursor: pointer;
 }
-
 .custom-header button:hover {
     text-decoration: underline;
 }
@@ -48,18 +47,18 @@
     backdrop-filter: blur(6px);
 }
 
-/* --- Card Panels --- */
-.card {
-    background: rgba(255, 255, 255, 0.6);
+/* --- Widget Blocks --- */
+.widget {
+    background: rgba(255,255,255,0.6);
     border: 1px solid #F1DCD7;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 1rem;
-    height: 250px;  /* fixed height for grid alignment */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     backdrop-filter: blur(6px);
-    overflow: hidden;
+    margin-bottom: 1.5rem;
 }
-.card h3 {
+
+.widget h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
     color: #4A3F46;
@@ -67,9 +66,19 @@
     font-size: 1.1rem;
 }
 
-/* --- Buttons --- */
+/* Larger outer widgets (for wrapping whole page sections) */
+.big-widget {
+    background: rgba(255,255,255,0.7);
+    border: 2px solid #E9B7A9;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* --- Buttons inside widgets --- */
 div.stButton > button {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255,255,255,0.6);
     border-radius: 8px;
     border: 1px solid #F1DCD7;
     color: #4A3F46;
@@ -82,7 +91,7 @@ div.stButton > button:hover {
     transform: translateY(-2px);
 }
 
-/* --- Inputs, text areas, select boxes --- */
+/* --- Inputs and Select Boxes --- */
 .stTextInput textarea,
 .stTextInput input,
 .stSelectbox select,
@@ -93,13 +102,13 @@ div.stButton > button:hover {
     color: #4A3F46 !important;
 }
 
-/* --- Metric/KPI values --- */
+/* --- Metric/KPI Values --- */
 [data-testid="stMetricValue"] {
     color: #4A3F46;
     font-weight: bold;
 }
 
-/* Hide Streamlit default menu/footer */
+/* Hide default Streamlit menu/footer */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
