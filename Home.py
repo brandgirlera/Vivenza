@@ -18,7 +18,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Handle page navigation ---
-params = st.experimental_get_query_params()
+params = st.query_params()
 if "page" in params:
     target = params["page"][0]
     if target != "Home":
