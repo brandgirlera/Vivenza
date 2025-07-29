@@ -18,9 +18,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Handle page navigation ---
-params = st.query_params()
+params = st.query_params
 if "page" in params:
-    target = params["page"][0]
+    target = params["page"]
     if target != "Home":
         st.switch_page(f"{target}.py")
 
