@@ -1,12 +1,57 @@
+/* Background gradient */
 [data-testid="stAppViewContainer"] {
     background: linear-gradient(180deg, #F8E9E7, #FDEFEA);
 }
+
+/* Transparent header */
 [data-testid="stHeader"] {
     background: rgba(255,255,255,0.0);
 }
+
+/* Card container for widgets */
+.card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #F1DCD7;
+    border-radius: 10px; /* Change to 0 for perfectly square corners */
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+}
+.card h3 {
+    margin-top: 0;
+    color: #4A3F46;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Buttons: frosted style */
 div.stButton > button {
-    background: rgba(255,255,255,0.6);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
     border: 1px solid #F1DCD7;
     color: #4A3F46;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+div.stButton > button:hover {
+    background: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
+}
+
+/* Inputs, text areas, select boxes */
+.stTextInput textarea,
+.stTextInput input,
+.stSelectbox select,
+.stTextArea textarea {
+    background: rgba(255,255,255,0.6) !important;
+    border: 1px solid #F1DCD7 !important;
+    border-radius: 8px !important;
+    color: #4A3F46 !important;
+}
+
+/* Metric/KPI styling */
+[data-testid="stMetricValue"] {
+    color: #4A3F46;
+    font-weight: bold;
 }
